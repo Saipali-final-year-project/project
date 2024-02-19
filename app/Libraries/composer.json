@@ -1,0 +1,7 @@
+{
+    "name": "flutter/payment",
+    "description": "flutter payment gateway",
+    "require": {
+        "flutterwavedev/flutterwave-v3": "^1.0"
+    }
+}
