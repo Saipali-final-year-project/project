@@ -139,9 +139,7 @@
                                 <th>To</th>
                                 <th>Blood Group</th>
                                 <th>QTY</th>
-                                <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                                 <th>Action</th>
-                                <?php endif;?>
                             </tr>
                         </thead>
                         <tbody>
@@ -157,7 +155,6 @@
                                 <td><?= $car['sender_branch'] ?></td>
                                 <td><?= $car['product_name'] ?></td>
                                 <td><?= $car['qty'] ?></td>
-                                <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                                 <td>
                                     <a href="<?= base_url("/parcel/show".$car['id']) ?>" class="btn btn-sm btn-dark"><i
                                             class="la la-eye"></i></a>
@@ -169,7 +166,6 @@
                                     
                                    
                                 </td>
-                                <?php endif;?>
                             </tr>
                             <?php } ?>
                             <?php } ?>

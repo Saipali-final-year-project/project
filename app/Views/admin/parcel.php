@@ -65,11 +65,9 @@
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title">Delivery list</h4>
-                <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                 <button type="button" class="btn btn-primary" data-toggle="modal" ><a href="<?= base_url('/add_parcel');?>"><+ Add
                     New</a>
                 </button>
-                <?php endif; ?>
                 <div class="modal fade" id="add_branch">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
@@ -142,9 +140,7 @@
                                 <th>Hospital</th>
                                 <th>Patient Name</th>
                                 <th>QTY</th>
-                                <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                                 <th>Action</th>
-                                <?php endif;?>
                             </tr>
                         </thead>
                         <tbody>
@@ -160,7 +156,6 @@
                                 <td><?= $car['sender_name'] ?></td>
                                 <td><?= $car['sender_mobile'] ?></td>
                                 <td><?= $car['qty'] ?></td>
-                                <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                                 <td>
                                     <a href="<?= base_url("/parcel/show".$car['id']) ?>" class="btn btn-sm btn-dark"><i
                                             class="la la-eye"></i></a>
@@ -170,7 +165,6 @@
                                         class="btn btn-sm btn-danger"><i class="la la-trash-o"></i></a>
                                    
                                 </td>
-                                <?php endif;?>
                             </tr>
                             <?php } ?>
                             <?php } ?>

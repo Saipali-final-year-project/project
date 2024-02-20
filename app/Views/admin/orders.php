@@ -70,10 +70,8 @@
         <div class="card-header">
                 <h4 class="card-title"><?=$page_title?></h4>
                 <!-- Button trigger modal -->
-                <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add_branch">+ Add
                     New</button>
-                    <?php endif; ?>
                 <!-- Modal -->
                 <div class="modal fade " id="add_branch">
                     <div class="modal-dialog modal-dialog-centered" role="document" align="center">
@@ -192,9 +190,7 @@
                                 <th>units</th>
                                 <th>Hospital</th>
                                 <th>Address</th>
-                                <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                                 <th>Action</th>
-                                <?php endif; ?>
                             </tr>
                         </thead>
                         <tbody>
@@ -223,7 +219,7 @@
                                         <td>
                                             <?= $bra['address'] ?>
                                         </td>
-                                        <?php if ((($session->get('tablename')) !=='seeker')) : ?>
+                                        
                                         <td>
                                         <a href="<?= base_url("/orders/show".$bra['id']) ?>" class="btn btn-sm btn-dark"><i
                                             class="la la-eye"></i></a>
@@ -255,7 +251,6 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <?php endif; ?>
                                     </tr>
                                 <?php } ?>
                             <?php } ?>

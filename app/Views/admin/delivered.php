@@ -65,7 +65,7 @@
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title"><?=$page_title?></h4>
-                <?php if ((($session->get('tablename')) !=='seeker')) : ?>
+
                 <div class="modal fade" id="add_branch">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
@@ -122,7 +122,7 @@
                         </div>
                     </div>
                 </div>
-<?php endif; ?>
+
             </div>
             <div class="card-body">
                 <div class="table-responsive">

@@ -40,103 +40,10 @@
       <div class="d-flex">
         <a href="#about" class="btn-get-started scrollto" style="background-color: #d62a24">Login Now</a>
         <a href="https://youtu.be/P4jjra1gc1c" class="glightbox btn-watch-video" ><i class="bi bi-play-circle" style="color: #d62a24"></i><span>Watch Video</span></a>
-        <a href="#about" class="btn-get-started scrollto btn" style="background-color: #d62a24" data-toggle="modal" style="color:white; background-color:#1ba70c" data-target="#add_seeker">Request Now</a>
       </div>
     </div>
   </section><!-- End Hero -->
-  <div class="modal fade" id="add_seeker">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <form action="<?= base_url('/request'); ?>" enctype="multipart/form-data" method="POST">
-                        <?= csrf_field() ?>
-                        <div class="modal-header">
-                            <h5 class="modal-title">Insert Seeker</h5>
-                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label>First Name</label>
-                                    <input name="firstname" type="text" class="form-control " required placeholder="FirstName">
 
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label>Last Name</label>
-                                    <input required name="lastname" type="text" class="form-control " placeholder="LastName">
-
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label>Email</label>
-                                    <input required name="email" type="email" class="form-control " placeholder="example@gmail.com">
-
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label>Mobile</label>
-                                    <input required name="mobile" type="text" class="form-control " placeholder="07087865671">
-                                </div>
-                                
-                                <div class="form-group col-md-6">
-                                    <label>NIN</label>
-                                    <input required name="NIN" type="text" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label>Region</label>
-                                    <select class="form-select" name="region" aria-label="Default select example">
-                                        <option selected>Select</option>
-                                        <option value="Central">Central</option>
-                                        <option value="Northern">Northern</option>
-                                        <option value="Western">Western</option>
-                                        <option value="Eastern">Eastern</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label>District</label>
-                                    <input required name="district" type="text" class="form-control">
-                                </div>
-
-                                <div class="form-group col-md-6">
-                                    <label>Town</label>
-                                    <input required name="town" type="text" class="form-control">
-                                </div>
-
-                                <div class="form-group col-md-6">
-                                    <label>Blood Needed</label>
-                                    <input required name="subcounty" type="text" class="form-control">
-                                </div>
-
-                                <div class="form-group col-md-6">
-                                    <label>Collection Area</label>
-                                    <select class="form-select" name="collection" aria-label="Default select example">
-                                        <option selected>Open this select menu</option>
-                                        <?php if (count($branches)) {
-                                            foreach ($branches as $branch) {
-                                                echo '<option value="' . $branch['Bname'] . '">' . $branch['Bname'] . '</option>';
-                                            }
-                                        } ?>
-                                    </select>
-
-                                </div>
-
-                                <div class="form-group col-md-6">
-                                    <label>Password</label>
-                                    <input required name="password" type="password" class="form-control">
-                                </div>
-                                <input name="status" type="hidden" class="form-control" value="Inactive">
-                            </div>
-
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn" style="color:white; background-color:#1ba70c">Save</button>
-                            <button type="button" class="btn" style="color:#1ba70c; background-color:white; border:1px solid #1ba70c" data-dismiss="modal">Close</button>
-
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </div>
   <main id="main">
 
 

@@ -62,9 +62,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="<?= base_url('/create'); ?>" role="form" class="php-email-form"
-             enctype="multipart/form-data" method="POST">
-                        <?= csrf_field() ?>
+            <form action="<?= base_URL('send'); ?>" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>

@@ -6,7 +6,7 @@ use CodeIgniter\RESTful\ResourceController;
 use App\Models\UserModel;
 use App\Models\ImageModel;
 use App\Models\CarImagesModel;
-use App\Models\DonorModel;
+use App\Models\CustomerModel;
 
 class RegisterController extends ResourceController {
     /**
@@ -22,7 +22,7 @@ class RegisterController extends ResourceController {
         $this->security =  \Config\Services::security();
         $this->email = \Config\Services::email();
         $this->CarImagesModel = new CarImagesModel();
-        $this->DonorModel = new DonorModel();
+        $this->CustomerModel = new CustomerModel();
     }
 
     public function index() {
@@ -91,7 +91,7 @@ class RegisterController extends ResourceController {
             $file = $this->request->getFile('photo');
             $name = $file->getRandomName();
             $file->move('assets/upload/', $name);
-            $model = new DonorModel;
+            $model = new CustomerModel;
             $data[ 'token' ] = csrf_hash();
             $uniid = md5( str_shuffle( 'abcdefghijklmnopqrstuvwxyz'.time() ) );
             $data = [
@@ -103,11 +103,10 @@ class RegisterController extends ResourceController {
                 'NIN'   =>$this->request->getVar( 'NIN' ),
                 'region'   =>$this->request->getVar( 'region' ),
                 'district'   =>$this->request->getVar( 'district' ),
-                'bg'   =>$this->request->getVar( 'bg' ),
+                'town'   =>$this->request->getVar( 'town' ),
                 'subcounty'   =>$this->request->getVar( 'subcounty' ),
                 'password' => password_hash( $this->request->getVar( 'password' ), PASSWORD_DEFAULT ),
                 'uniid'   =>$uniid,
-                'type'=>4,
             ];
 
             

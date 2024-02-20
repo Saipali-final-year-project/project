@@ -66,11 +66,9 @@
                 <!-- <h4 class="card-title"><-?= $page_title ?></h4> -->
             </div>
             <div class="col-sm-2">
-            <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn" data-toggle="modal" style="color:white; background-color:#1ba70c" data-target="#add_driver">+ Add
                     New</button>
-                    <?php endif;?>
             </div>
         </div>
 
@@ -210,13 +208,12 @@
                             <th>License Number</th>
                             <th>Number Plate</th>
                             <th>Truck capacity</th>
+                            <th>Truck Image</th>
                             <th>Location</th>
                             <th>Collection Area</th>
                             <th>Delivery price(per bunch)</th>
-                            <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                             <!-- <th>Status</th> -->
                             <th>Action</th>
-                            <?php endif; ?>
                         </tr>
                     </thead>
                     <tbody>
@@ -234,14 +231,17 @@
                                     <td><?= $driver['licenseNo'] ?></td>
                                     <td><?= $driver['numberplate'] ?></td> 
                                     <td><?= $driver['capacity'] ?></td>
-                                    
+                                    <td>
+                                        <img src="<?php echo base_url('assets/upload/' . $driver["carimages"]) ?>" class="img-fluid" style="width:100%; height:100px;" />
+                                    </td>
                                     <td><?= $driver['location'] ?></td>
                                     <td style="width: auto; height:auto;">
                                         <iframe src="https://www.google.com/maps?q=<?= $driver['latitude']; ?>,<?= $driver['longitude']; ?>$hl=es;z=14&output=embed" frameborder="0"></iframe></td>
                                     <td><?= $driver['collection'] ?></td>
                                     <td><?= $driver['deliveryprice'] ?></td>
-                                    <?php if ((($session->get('tablename')) !=='seeker')) : ?>
+
                                     <td>
+                                        <a href="<?= base_url("/Drivers/updateimage" . $driver['id']) ?>" class="btn" style="background-color:#1ba70c; color:white;" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Update profile image"><i class="la la-user"></i></a>
                                         <a href="<?= base_url("/Drivers/show" . $driver['id']) ?>" class="btn btn-sm btn-dark" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="View driver information"><i class="la la-eye"></i></a>
                                         <a href="<?= base_url("/Drivers/edit" . $driver['id']) ?>" class="btn btn-sm btn-primary"><i class="la la-pencil" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Edit driver information"></i></a>
                                         
@@ -266,7 +266,6 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <?php endif; ?>
                                 </tr>
                                 
                             <?php } ?>

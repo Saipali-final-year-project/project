@@ -168,10 +168,8 @@
             </div>
             <div class="col-sm-2">
                 <!-- Button trigger modal -->
-                <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                 <button type="button" class="btn" data-toggle="modal" style="color:white; background-color:#1ba70c" data-target="#add_seeker">+ Add
                     </button>
-                    <?php endif;?>
             </div>
         </div>
             <div class="table-responsive">
@@ -185,9 +183,7 @@
                             <th>Mobile</th>
                             <th>NIN</th>
                             <!-- <th>Status</th> -->
-                            <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                             <th>Action</th>
-                            <?php endif;?>
                         </tr>
                     </thead>
                     <tbody>
@@ -199,7 +195,7 @@
                                     <td><?= $seeker['email'] ?></td>
                                     <td><?= $seeker['mobile'] ?></td>
                                     <td><?= $seeker['NIN'] ?></td>
-                                    <?php if ((($session->get('tablename')) !=='seeker')) : ?>
+
                                     <td>
                                         <a href="<?= base_url("/seekers/show" . $seeker['id']) ?>" class="btn btn-sm btn-dark" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="View Donor information"><i class="la la-eye"></i></a>
                                         <a href="<?= base_url("/seekers/edit" . $seeker['id']) ?>" class="btn btn-sm btn-primary"><i class="la la-pencil" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Edit Donor information"></i></a>
@@ -227,7 +223,6 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <?php endif;?>
                                 </tr>
                             <?php } ?>
                         <?php } ?>

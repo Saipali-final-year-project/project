@@ -140,9 +140,7 @@
                                 <th>Sender Branch</th>
                                 <th>Product</th>
                                 <th>Status</th>
-                                <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                                 <th>Action</th>
-                                <?php endif; ?>
                             </tr>
                         </thead>
                         <tbody>
@@ -158,8 +156,7 @@
                                 <td><?= $car['sender_branch'] ?></td>
                                 <td><?= $car['product_name'] ?></td>
                                 <td><span class="badge badge-rounded badge-warning"><?= $car['status'] ?></span></td>
-                                
-                                <?php if ((($session->get('tablename')) !=='seeker')) : ?><td>
+                                <td>
                                     <a href="<?= base_url("/transit/show".$car['id']) ?>" class="btn btn-sm btn-dark"><i
                                             class="la la-eye"></i></a>
                                     <a href="<?= base_url("/transit/edit".$car['id']) ?>"
@@ -170,7 +167,6 @@
                                     
                                    
                                 </td>
-                                <?php endif; ?>
                             </tr>
                             <?php } ?>
                             <?php } ?>

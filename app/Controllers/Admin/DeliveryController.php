@@ -15,7 +15,6 @@ use App\Models\OrderModel;
 use App\Models\CarImagesModel;
 use App\Models\SeekerModel;
 use App\Models\DeliverModel;
-use App\Models\ContactModel;
 
 class DeliveryController extends ResourceController {
     /**
@@ -37,7 +36,6 @@ class DeliveryController extends ResourceController {
         $this->CarImagesModel = new CarImagesModel();
         $this->SeekerModel = new SeekerModel();
         $this->DeliverModel = new DeliverModel();
-        $this->ContactModel = new ContactModel();
         $this->security =  \Config\Services::security();
     }
  
@@ -47,7 +45,6 @@ class DeliveryController extends ResourceController {
         $data['branch'] =  $this->AdminModel->where('type','1')->findAll();
         return view( 'admin/admins', $data );
     }
-    
     public function add_admin() {
         $dat['page_title'] = "Admins";
         if($this->request->getMethod()==='post'){

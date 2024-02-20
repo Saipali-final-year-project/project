@@ -37,15 +37,7 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Blog::index');
-$routes->post('/request', 'Blog::request');
-$routes->get('/request', 'Blog::request');
-$routes->get('contactus', 'ContactController::contactus');
-
-$routes->get('/create', 'ContactController::create');
-
-$routes->post('/create', 'ContactController::create');
-$routes->get('/index', 'Blog::index',['filter' => 'authFilter']);
-$routes->post('/index', 'Blog::index',['filter' => 'authFilter']);
+$routes->get('contactus', 'Blog::contactus');
 $routes->get('/All_Categories', 'Blog::categories');
 $routes->get('/All_View(:any)', 'Blog::view/$1');
 $routes->get('/weather', 'Blog::weather');

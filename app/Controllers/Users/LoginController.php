@@ -251,11 +251,10 @@ class LoginController extends ResourceController
                 'town' => $user['town'],
                 'subcounty' => $user['subcounty'],
                 'type' => $user['type'],
-                'tablename' => $user['tablename'],
                 'isLoggedIn' => true
             ];
             $session->set($ses_data);
-            return redirect()->to(base_url('/dashboard'));
+            return redirect()->to(base_url('/'));
          }else{
             session()->setFlashdata('failed', 'Failed! incorrect password');
             return redirect()->to(base_url('/login2')) ->withInput()->with('error', 'Your account is inactive.');

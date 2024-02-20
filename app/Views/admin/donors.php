@@ -71,11 +71,9 @@
                 <h4 class="card-title">
                     Donor
                 </h4>
-                <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add_branch">+ Add
                     New Donor</button>
-                    <?php endif; ?>
                 <!-- Modal -->
                 <div class="modal fade" id="add_branch">
                     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -149,10 +147,6 @@
                                                 <option value="O-">O-</option>
                                             </select>
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <label>password</label>
-                                            <input required name="password" placeholder="password here" type="password" class="form-control ">
-                                        </div>
                                     </div>
                                 </div>
                                 
@@ -179,9 +173,7 @@
                                 <th>Mobile</th>
                                 <th>NIN</th>
                                 <th>Blood gp</th>
-                                <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                                 <th>Action</th>
-                                <?php endif;?>
                             </tr>
                         </thead>
                         <tbody>
@@ -206,7 +198,7 @@
                                         <td>
                                             <?= $bra['bg'] ?>
                                         </td>
-                                        <?php if ((($session->get('tablename')) !=='seeker')) : ?>
+                                        
                                         <td>
                                             <a href="<?= base_url("/donors/show" . $bra['id']) ?>" class="btn btn-sm btn-dark"><i
                                                     class="la la-eye"></i></a>
@@ -241,7 +233,6 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <?php endif; ?>
                                     </tr>
                                 <?php } ?>
                             <?php } ?>

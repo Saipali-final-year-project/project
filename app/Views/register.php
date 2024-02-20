@@ -129,7 +129,7 @@
 
                                         <div class="form-group">
                                             <label>Donor Blood Group</label>
-                                            <input required name="bg" type="text" class="form-control">
+                                            <input required name="town" type="text" class="form-control">
                                         </div>
 
                                         <div class="form-group d-none">

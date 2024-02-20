@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 class ContactController extends BaseController
 {
 
-    public function contactus()
+    public function index()
     {
         return view('contact');
     }
@@ -49,5 +49,4 @@ class ContactController extends BaseController
         ];
         return $this->response->setJSON($data);
     }
-    
 }

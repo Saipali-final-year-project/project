@@ -31,6 +31,109 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item dropdown mr-1">
+                        <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
+                            id="messageDropdown" href="#" data-toggle="dropdown">
+                            <i class="ti-email mx-0"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                            aria-labelledby="messageDropdown">
+                            <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
+                            <a class="dropdown-item">
+                                <div class="item-thumbnail">
+                                    <?php if(($session->get('profile')) ==''):?>
+                                    <img src="<?= base_url();?>/assets/img/blog/details/profile.jpg" width="20" alt="">
+                                    <?php else  : ?>
+                                    <img src="<?= $session->get('profile'); ?>" width="20">
+                                    <?php endif; ?>
+                                </div>
+                                <div class="item-content flex-grow">
+                                    <h6 class="ellipsis font-weight-normal">Sabir
+                                    </h6>
+                                    <p class="font-weight-light small-text text-muted mb-0">
+                                        The meeting is cancelled
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="item-thumbnail">
+                                    <?php if(($session->get('profile')) ==''):?>
+                                    <img src="<?= base_url();?>/assets/img/blog/details/profile.jpg" width="20" alt="">
+                                    <?php else  : ?>
+                                    <img src="<?= $session->get('profile'); ?>" width="20">
+                                    <?php endif; ?>
+                                </div>
+                                <div class="item-content flex-grow">
+                                    <h6 class="ellipsis font-weight-normal">Fareed
+                                    </h6>
+                                    <p class="font-weight-light small-text text-muted mb-0">
+                                        New Blood Donated recieved
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="item-thumbnail">
+                                    <img src="/assets/img/blog/details/profile.jpg" alt="image" class="profile-pic">
+                                </div>
+                                <div class="item-content flex-grow">
+                                    <h6 class="ellipsis font-weight-normal"> Jamil
+                                    </h6>
+                                    <p class="font-weight-light small-text text-muted mb-0">
+                                        Upcoming Blood Donation camps
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+                            data-toggle="dropdown">
+                            <i class="ti-bell mx-0"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                            aria-labelledby="notificationDropdown">
+                            <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+                            <a class="dropdown-item">
+                                <div class="item-thumbnail">
+                                    <div class="item-icon bg-success">
+                                        <i class="ti-info-alt mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <h6 class="font-weight-normal">Application Error</h6>
+                                    <p class="font-weight-light small-text mb-0 text-muted">
+                                        Just now
+                                    </p>
+
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="item-thumbnail">
+                                    <div class="item-icon bg-warning">
+                                        <i class="ti-settings mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <h6 class="font-weight-normal">Settings</h6>
+                                    <p class="font-weight-light small-text mb-0 text-muted">
+                                        Private message
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="item-thumbnail">
+                                    <div class="item-icon bg-info">
+                                        <i class="ti-user mx-0"></i>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <h6 class="font-weight-normal">New user registration</h6>
+                                    <p class="font-weight-light small-text mb-0 text-muted">
+                                        2 days ago
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
                             <?php if(($session->get('profile')) ==''):?>

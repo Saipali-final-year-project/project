@@ -70,11 +70,9 @@
             <div class="card-header">
                 <h4 class="card-title">Available blood</h4>
                 <!-- Button trigger modal -->
-                <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                 <button href="<?= base_url("/sell") ?> type="button" class="btn btn-primary" data-toggle="modal" data-target="#add_branch">+ Add
                     New</button>
                 <!-- Modal -->
-                <?php endif; ?>
 
             </div>
             <div class="card-body">
@@ -91,9 +89,7 @@
                                 <th>Qty</th>
                                 <th>Exp Date</th>
                                 <th>Email</th> 
-                                <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                                 <th>Action</th>
-                                <?php  endif; ?>
                             </tr>
                         </thead>
                         <tbody>
@@ -107,7 +103,6 @@
                                 <td><?= $bra['qty'] ?></td>
                                 <td><?= $bra['exp'] ?></td>
                                 <td><?= $bra['email'] ?></td>
-                                <?php if ((($session->get('tablename')) !=='seeker')) : ?>
                                 <td>
                                     <a href="<?= base_url("/availableblood/show".$bra['id']) ?>" class="btn btn-sm btn-dark"><i
                                             class="la la-eye"></i></a>
@@ -138,7 +133,6 @@
                                         </div>
                                     </div>
                                 </td>
-                                <?php endif; ?>
                             </tr>
                             <?php } ?>
                             <?php } ?>

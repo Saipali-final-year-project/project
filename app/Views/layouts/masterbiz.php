@@ -60,7 +60,7 @@
                        <!-- <a href="<?= base_url('/login2') ?>"><i class="fa fa-user"></i>Login</a> -->
                        <!-- ##################### -->
                        <div class="header-profile" style="color: #d62a24" ;>
-                           <a class="nav-link scrollto" href="#" role="button" data-toggle="dropdown">Login</a>
+                           <a class="nav-link scrollto" href="#" role="button" data-toggle="dropdown" >Login</a>
                            <div class="dropdown-menu dropdown-menu-right">
                                <a href="<?= base_url('/login1') ?>" class="dropdown-item ai-icon" style="background-color:white">
                                    <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -102,7 +102,7 @@
                    
                    <?php else: ?>
                    <div class="header-profile" style ="background-color: rgb(219, 61, 61); color: white;">
-                       <a class="nav-link"style="background-color:white" href="#" role="button" data-toggle="dropdown">
+                       <a class="nav-link" href="#" role="button" data-toggle="dropdown">
                            <?php if((session()->get('profile')) ==''):?>
                            <img src="<?=base_url()?>/assets/upload/<?= session()->get('photo'); ?>" width="20" alt="">
                            <?php else  : ?>
@@ -111,8 +111,8 @@
                            <?= session()->get('firstname'); ?> <?= session()->get('lastname'); ?>
 
                        </a>
-                       <div class="dropdown-menu dropdown-menu-right" style="background-color:white">
-                           <a href="<?= base_url('/personal'); ?>" class="dropdown-item ai-icon" style="background-color:white">
+                       <div class="dropdown-menu dropdown-menu-right" >
+                           <a href="<?= base_url('/personal'); ?>" class="dropdown-item ai-icon">
                                <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                    viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail" >
@@ -121,10 +121,10 @@
                                    </path>
                                    <polyline points="22,6 12,13 2,6"></polyline>
                                </svg>
-                               <span class="ml-2" style="background-color:white">Account Settings </span>
+                               <span class="ml-2">Account Settings </span>
                            </a>
                            <div class="dropdown-divider"></div>
-                           <a href="<?= base_url('logout2') ?>" class="dropdown-item ai-icon" style="background-color:white">
+                           <a href="<?= base_url('logout2') ?>" class="dropdown-item ai-icon">
                                <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                    viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out">
